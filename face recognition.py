@@ -4,7 +4,7 @@ import numpy as np
 face_cascade = cv2.CascadeClassifier('/anaconda3/lib/python3.7/site-packages/cv2/data/haarcascade_frontalface_default.xml')
 eye_cascade = cv2.CascadeClassifier('/anaconda3/lib/python3.7/site-packages/cv2/data/haarcascade_eye.xml')
 
-img = cv2.imread('/path to image/person.jpeg')
+img = cv2.imread('/path to image/person.jpg')
 gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY) #convert image to grayscale
 faces = face_cascade.detectMultiScale(gray, 1.1, 5)
 #print(faces)
