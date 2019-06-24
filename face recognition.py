@@ -1,17 +1,11 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[4]:
-
-
-import numpy as np
 import cv2
+import numpy as np
 
 face_cascade = cv2.CascadeClassifier('/anaconda3/lib/python3.7/site-packages/cv2/data/haarcascade_frontalface_default.xml')
 eye_cascade = cv2.CascadeClassifier('/anaconda3/lib/python3.7/site-packages/cv2/data/haarcascade_eye.xml')
 
-img = cv2.imread('/Users/laxmanjeergal/Desktop/p.jpeg')
-gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+img = cv2.imread('/path to image/person.jpeg')
+gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY) #convert image to grayscale
 faces = face_cascade.detectMultiScale(gray, 1.1, 5)
 #print(faces)
 for (x,y,w,h) in faces:
@@ -32,8 +26,6 @@ cv2.imshow('only face in gray',roi_gray)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 
-
-# In[ ]:
 
 
 
